@@ -1,0 +1,744 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>空客 - A33A</title>
+    <link rel="stylesheet" href="../../layui/css/layui.css">
+    <link rel="stylesheet" href="../../css/aircraft/aircraft.css">
+    <!-- LineMenuStyles -->
+    <link rel="stylesheet" type="text/css" href="../../css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="../../css/demo.css">
+    <link rel="stylesheet" type="text/css" href="../../css/component.css">
+</head>
+<!-- onmousemove="show_coords(event)" -->
+<body class="layui-layout-body">
+<div id="mini-seat"></div>
+<div class="layui-layout layui-layout-admin">
+    <div class="layui-header">
+        <div class="layui-logo">空客 - A33A</div>
+        <ul class="layui-nav layui-layout-right">
+            <li class="layui-nav-item"><a href="/">机型选择</a></li>
+        </ul>
+    </div>
+
+    <div class="layui-side">
+        <div class="layui-side-scroll">
+            <ul class="layui-nav layui-nav-tree" lay-filter="test">
+                <li class="layui-nav-item">
+                    <a class="" href="javascript:;">国内航班</a>
+                    <dl class="layui-nav-child">
+                        <dd><a href="javascript:;">个人自动分配</a></dd>
+                        <dd><a href="javascript:;">小组自动分配</a></dd>
+                        <dd><a href="javascript:;">整机自动分配</a></dd>
+                    </dl>
+                </li>
+                <li class="layui-nav-item layui-nav-itemed">
+                    <a href="javascript:;">国际航班</a>
+                    <dl class="layui-nav-child">
+                        <dd><a href="javascript:;">个人自动分配</a></dd>
+                        <dd><a href="javascript:;">小组自动分配</a></dd>
+                        <dd><a href="javascript:;">整机自动分配</a></dd>
+                    </dl>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="layui-body">
+        <!-- 内容主体区域 -->
+        <div style="padding: 15px;" class="la-body layui-hide">
+            <h2 class="second-con-title">A33A</h2>
+            <div class="second-form-box">
+                <div class="form-con-list">
+                    <div class="form-con show oldHtmlpage" style="width:95%;">
+                        <div id="htmlpage">
+                            <div align="center">
+                                <div style="text-align:left;">
+                                    <strong><span style="font-size:14px;">国内航线</span></strong>
+                                </div>
+                                <table class="dcampusTable ke-zeroborder" style="width:100%;"
+                                       cellspacing="0" cellpadding="2" border="0">
+                                    <tbody>
+                                    <tr></tr>
+                                    <tr>
+                                        <th colspan="5"><strong>机型：A33A</strong></th>
+                                    </tr>
+                                    <tr>
+                                        <td>座位总数</td>
+                                        <td colspan="3">275</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="background-color:#eff5fa;">座位类型</td>
+                                        <td style="width:125px;background-color:#eff5fa;">公务舱</td>
+                                        <td style="width:120px;background-color:#eff5fa;">明珠经济舱</td>
+                                        <td style="width:130px;background-color:#eff5fa;">经济舱</td>
+                                    </tr>
+                                    <tr>
+                                        <td>座位数</td>
+                                        <td>30</td>
+                                        <td>48</td>
+                                        <td>197</td>
+                                    </tr>
+                                    <tr>
+                                        <td>座位间距 （英寸）</td>
+                                        <td>75</td>
+                                        <td>36</td>
+                                        <td>32-33</td>
+                                    </tr>
+                                    <tr>
+                                        <td>扶手间座椅宽度 （英寸）</td>
+                                        <td>20.9</td>
+                                        <td>18.1</td>
+                                        <td>18.1</td>
+                                    </tr>
+                                    <tr>
+                                        <td>座椅倾斜度</td>
+                                        <td>180°</td>
+                                        <td>100°</td>
+                                        <td>100°</td>
+                                    </tr>
+                                    <tr>
+                                        <td>个人电视显示屏（英寸）<br></td>
+                                        <td>15.4</td>
+                                        <td>9</td>
+                                        <td>9</td>
+                                    </tr>
+                                    <tr>
+                                        <td>座椅电源<br>
+                                        </td>
+                                        <td>√<br></td>
+                                        <td>√<br></td>
+                                        <td>√<br></td>
+                                    </tr>
+                                    <tr>
+                                        <td>USB插口<br></td>
+                                        <td>--</td>
+                                        <td>--</td>
+                                        <td>--</td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                                <br>
+                            </div>
+                            <p align="center">
+                                &nbsp;<img src="../../image/mezzo-gn-A33A.png">
+                            </p>
+                            <p align="center">
+                                <a href="../../image/big-gn-A33A.png" target="_blank" style="color: #0000FF">查看大图</a>
+                            </p>
+                            <p align="center">
+                                客舱布局及数据仅供参考，请以实际乘机时为准。
+                            </p>
+                            <div align="center">
+                                <div style="text-align:left;">
+                                    <strong><span style="font-size:14px;">国际航线</span></strong>
+                                </div>
+                                <table class="dcampusTable ke-zeroborder" style="width:100%;" bordercolor="#ccc"
+                                       cellspacing="0" cellpadding="2" border="0">
+                                    <tbody>
+                                    <tr></tr>
+                                    <tr>
+                                        <th colspan="5"><strong>机型：A33A</strong></th>
+                                    </tr>
+                                    <tr>
+                                        <td>座位总数</td>
+                                        <td colspan="3">275</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="background-color:#eff5fa;">座位类型</td>
+                                        <td style="width:125px;background-color:#eff5fa;">公务舱</td>
+                                        <td style="width:130px;background-color:#eff5fa;">经济舱</td>
+                                    </tr>
+                                    <tr>
+                                        <td>座位数</td>
+                                        <td>30</td>
+                                        <td>245</td>
+                                    </tr>
+                                    <tr>
+                                        <td>座位间距 （英寸）</td>
+                                        <td>75</td>
+                                        <td>32-33</td>
+                                    </tr>
+                                    <tr>
+                                        <td>扶手间座椅宽度 （英寸）</td>
+                                        <td>20.9</td>
+                                        <td>18.1</td>
+                                    </tr>
+                                    <tr>
+                                        <td>座椅倾斜度</td>
+                                        <td>180°</td>
+                                        <td>100°</td>
+                                    </tr>
+                                    <tr>
+                                        <td>个人电视显示屏（英寸）<br></td>
+                                        <td>15.4</td>
+                                        <td>9</td>
+                                    </tr>
+                                    <tr>
+                                        <td>座椅电源<br></td>
+                                        <td>√<br></td>
+                                        <td>√<br></td>
+                                    </tr>
+                                    <tr>
+                                        <td>USB插口<br></td>
+                                        <td>--</td>
+                                        <td>--</td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                                <br>
+                            </div>
+                            <p align="center">
+                                &nbsp;<img src="../../image/mezzo-gj-A33A.png">
+                            </p>
+                            <p align="center">
+                                <a href="../../image/big-gj-A33A.png" target="_blank" style="color: #0000FF">查看大图</a>
+                            </p>
+                            <p align="center">
+                                客舱布局及数据仅供参考，请以实际乘机时为准。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 分配页面区域 -->
+        <div style="padding: 15px;" class="aircraft-body layui-show">
+            <!-- 国内航班 -->
+            <!-- 国际航班 -->
+            <div class="gj-body-top layui-main">
+                <!-- 个人 -->
+                <div class="gr-form layui-hide">
+                    <form class="layui-form">
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">姓名</label>
+                            <div class="layui-input-block">
+                                <input type="text" id="pName" name="pName" required lay-verify="required"
+                                       placeholder="请输入您的姓名"
+                                       autocomplete="off" class="layui-input">
+                            </div>
+                        </div>
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">请选择偏好</label>
+                            <div class="layui-input-block">
+                                <select name="preferred" id="preferred" lay-verify="required">
+                                    <option value=""></option>
+                                    <option value="windows">靠窗</option>
+                                    <option value="aisle">靠过道</option>
+                                    <option value="basket">婴儿摇篮</option>
+                                    <option value="gate">登机口</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="layui-form-item">
+                            <div class="layui-input-block" style="text-align: center">
+                                <input type="button" id="distribution"
+                                       style="background-color: #009688;width: 340px;height: 38px;color: #FFFFFF"
+                                       value="分配座位"/>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <!-- 小组 -->
+                <div class="xz-form">
+                    <div class="xz-form-bd">
+                        <form class="layui-form">
+                            <div class="xz-form-bd-div">
+                                <div class="layui-form-item">
+                                    <label class="layui-form-label">姓名</label>
+                                    <div class="layui-input-block">
+                                        <input type="text" name="pName" required lay-verify="required"
+                                               placeholder="请输入您的姓名"
+                                               autocomplete="off" class="layui-input pName">
+                                    </div>
+                                </div>
+                                <div class="layui-form-item">
+                                    <label class="layui-form-label">请选择偏好</label>
+                                    <div class="layui-input-block">
+                                        <select name="preferred" class="preferred" lay-verify="required">
+                                            <option value=""></option>
+                                            <option value="windows">靠窗</option>
+                                            <option value="aisle">靠过道</option>
+                                            <option value="basket">婴儿摇篮</option>
+                                            <option value="gate">登机口</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="xz-form-bd-div">
+                                <div class="layui-form-item">
+                                    <label class="layui-form-label">姓名</label>
+                                    <div class="layui-input-block">
+                                        <input type="text" name="pName" required lay-verify="required"
+                                               placeholder="请输入您的姓名"
+                                               autocomplete="off" class="layui-input pName">
+                                    </div>
+                                </div>
+                            <div class="layui-form-item">
+                                <label class="layui-form-label">请选择偏好</label>
+                                <div class="layui-input-block">
+                                    <select name="preferred" class="preferred" lay-verify="required">
+                                        <option value=""></option>
+                                        <option value="windows">靠窗</option>
+                                        <option value="aisle">靠过道</option>
+                                        <option value="basket">婴儿摇篮</option>
+                                        <option value="gate">登机口</option>
+                                    </select>
+                                </div>
+                            </div>
+                            </div>
+                        </form>
+
+                    </div>
+                    <div class="layui-form-item">
+                        <div class="layui-input-block" style="text-align: center">
+                            <input type="button" id="distribution-xz"
+                                   style="background-color: #009688;width: 340px;height: 38px;color: #FFFFFF"
+                                   value="分配座位"/>
+                        </div>
+                    </div>
+                    <div class="jiahao">
+                        <i class="layui-icon layui-icon-add-circle-fine" style="font-size: 50px; color: #1E9FFF;"></i>
+                    </div>
+                </div>
+                <!-- 整机 -->
+            </div>
+            <div class="gj-body-bottom layui-main">
+                <div class="bottom-economy">
+                    <!-- left -->
+                    <div class="seat A31"></div>
+                    <div class="seat C31"></div>
+                    <div class="seat A32"></div>
+                    <div class="seat C32"></div>
+                    <div class="seat A33"></div>
+                    <div class="seat C33"></div>
+                    <div class="seat A34"></div>
+                    <div class="seat C34"></div>
+                    <div class="seat A35"></div>
+                    <div class="seat C35"></div>
+                    <div class="seat A36"></div>
+                    <div class="seat C36"></div>
+                    <div class="seat A37"></div>
+                    <div class="seat C37"></div>
+                    <div class="seat A38"></div>
+                    <div class="seat C38"></div>
+                    <div class="seat A39"></div>
+                    <div class="seat C39"></div>
+                    <div class="seat A40"></div>
+                    <div class="seat C40"></div>
+                    <div class="seat A41"></div>
+                    <div class="seat C41"></div>
+                    <div class="seat A42"></div>
+                    <div class="seat C42"></div>
+                    <div class="seat A43"></div>
+                    <div class="seat C43"></div>
+                    <div class="seat A44"></div>
+                    <div class="seat C44"></div>
+                    <div class="seat A45"></div>
+                    <div class="seat C45"></div>
+                    <div class="seat A47"></div>
+                    <div class="seat C47"></div>
+                    <div class="seat A48"></div>
+                    <div class="seat C48"></div>
+                    <div class="seat A49"></div>
+                    <div class="seat C49"></div>
+                    <div class="seat A50"></div>
+                    <div class="seat C50"></div>
+                    <div class="seat A51"></div>
+                    <div class="seat C51"></div>
+                    <div class="seat A52"></div>
+                    <div class="seat C52"></div>
+                    <div class="seat A53"></div>
+                    <div class="seat C53"></div>
+                    <div class="seat A54"></div>
+                    <div class="seat C54"></div>
+                    <div class="seat A55"></div>
+                    <div class="seat C55"></div>
+                    <div class="seat A56"></div>
+                    <div class="seat C56"></div>
+                    <div class="seat A57"></div>
+                    <div class="seat C57"></div>
+                    <div class="seat A58"></div>
+                    <div class="seat C58"></div>
+                    <div class="seat A59"></div>
+                    <div class="seat C59"></div>
+                    <div class="seat A60"></div>
+                    <div class="seat C60"></div>
+                    <div class="seat A61"></div>
+                    <div class="seat C61"></div>
+                    <!-- 中间 -->
+                    <div class="seat D31"></div>
+                    <div class="seat E31"></div>
+                    <div class="seat F31"></div>
+                    <div class="seat G31"></div>
+                    <div class="seat D32"></div>
+                    <div class="seat E32"></div>
+                    <div class="seat F32"></div>
+                    <div class="seat G32"></div>
+                    <div class="seat D33"></div>
+                    <div class="seat E33"></div>
+                    <div class="seat F33"></div>
+                    <div class="seat G33"></div>
+                    <div class="seat D34"></div>
+                    <div class="seat E34"></div>
+                    <div class="seat F34"></div>
+                    <div class="seat G34"></div>
+                    <div class="seat D35"></div>
+                    <div class="seat E35"></div>
+                    <div class="seat F35"></div>
+                    <div class="seat G35"></div>
+                    <div class="seat D36"></div>
+                    <div class="seat E36"></div>
+                    <div class="seat F36"></div>
+                    <div class="seat G36"></div>
+                    <div class="seat D37"></div>
+                    <div class="seat E37"></div>
+                    <div class="seat F37"></div>
+                    <div class="seat G37"></div>
+                    <div class="seat D38"></div>
+                    <div class="seat E38"></div>
+                    <div class="seat F38"></div>
+                    <div class="seat G38"></div>
+                    <div class="seat D39"></div>
+                    <div class="seat E39"></div>
+                    <div class="seat F39"></div>
+                    <div class="seat G39"></div>
+                    <div class="seat D40"></div>
+                    <div class="seat E40"></div>
+                    <div class="seat F40"></div>
+                    <div class="seat G40"></div>
+                    <div class="seat D41"></div>
+                    <div class="seat E41"></div>
+                    <div class="seat F41"></div>
+                    <div class="seat G41"></div>
+                    <div class="seat D42"></div>
+                    <div class="seat E42"></div>
+                    <div class="seat F42"></div>
+                    <div class="seat G42"></div>
+                    <div class="seat D43"></div>
+                    <div class="seat E43"></div>
+                    <div class="seat F43"></div>
+                    <div class="seat G43"></div>
+                    <div class="seat D44"></div>
+                    <div class="seat E44"></div>
+                    <div class="seat F44"></div>
+                    <div class="seat G44"></div>
+                    <div class="seat D45"></div>
+                    <div class="seat E45"></div>
+                    <div class="seat F45"></div>
+                    <div class="seat G45"></div>
+                    <div class="seat D46"></div>
+                    <div class="seat E46"></div>
+                    <div class="seat F46"></div>
+                    <div class="seat G46"></div>
+                    <div class="seat D47"></div>
+                    <div class="seat E47"></div>
+                    <div class="seat F47"></div>
+                    <div class="seat G47"></div>
+                    <div class="seat D48"></div>
+                    <div class="seat E48"></div>
+                    <div class="seat F48"></div>
+                    <div class="seat G48"></div>
+                    <div class="seat D49"></div>
+                    <div class="seat E49"></div>
+                    <div class="seat F49"></div>
+                    <div class="seat G49"></div>
+                    <div class="seat D50"></div>
+                    <div class="seat E50"></div>
+                    <div class="seat F50"></div>
+                    <div class="seat G50"></div>
+                    <div class="seat D51"></div>
+                    <div class="seat E51"></div>
+                    <div class="seat F51"></div>
+                    <div class="seat G51"></div>
+                    <div class="seat D52"></div>
+                    <div class="seat E52"></div>
+                    <div class="seat F52"></div>
+                    <div class="seat G52"></div>
+                    <div class="seat D53"></div>
+                    <div class="seat E53"></div>
+                    <div class="seat F53"></div>
+                    <div class="seat G53"></div>
+                    <div class="seat D54"></div>
+                    <div class="seat E54"></div>
+                    <div class="seat F54"></div>
+                    <div class="seat G54"></div>
+                    <div class="seat D55"></div>
+                    <div class="seat E55"></div>
+                    <div class="seat F55"></div>
+                    <div class="seat G55"></div>
+                    <div class="seat D56"></div>
+                    <div class="seat E56"></div>
+                    <div class="seat F56"></div>
+                    <div class="seat G56"></div>
+                    <div class="seat D57"></div>
+                    <div class="seat E57"></div>
+                    <div class="seat F57"></div>
+                    <div class="seat G57"></div>
+                    <div class="seat E58"></div>
+                    <div class="seat F58"></div>
+                    <div class="seat G58"></div>
+                    <div class="seat E59"></div>
+                    <div class="seat F59"></div>
+                    <div class="seat G59"></div>
+                    <div class="seat E60"></div>
+                    <div class="seat F60"></div>
+                    <div class="seat G60"></div>
+                    <div class="seat E61"></div>
+                    <div class="seat F61"></div>
+                    <div class="seat G61"></div>
+                    <div class="seat E62"></div>
+                    <div class="seat F62"></div>
+                    <div class="seat G62"></div>
+                    <!-- right -->
+                    <div class="seat H31"></div>
+                    <div class="seat K31"></div>
+                    <div class="seat H32"></div>
+                    <div class="seat K32"></div>
+                    <div class="seat H33"></div>
+                    <div class="seat K33"></div>
+                    <div class="seat H34"></div>
+                    <div class="seat K34"></div>
+                    <div class="seat H35"></div>
+                    <div class="seat K35"></div>
+                    <div class="seat H36"></div>
+                    <div class="seat K36"></div>
+                    <div class="seat H37"></div>
+                    <div class="seat K37"></div>
+                    <div class="seat H38"></div>
+                    <div class="seat K38"></div>
+                    <div class="seat H39"></div>
+                    <div class="seat K39"></div>
+                    <div class="seat H40"></div>
+                    <div class="seat K40"></div>
+                    <div class="seat H41"></div>
+                    <div class="seat K41"></div>
+                    <div class="seat H42"></div>
+                    <div class="seat K42"></div>
+                    <div class="seat H43"></div>
+                    <div class="seat K43"></div>
+                    <div class="seat H44"></div>
+                    <div class="seat K44"></div>
+                    <div class="seat H45"></div>
+                    <div class="seat K45"></div>
+                    <div class="seat H46"></div>
+                    <div class="seat K46"></div>
+                    <div class="seat H47"></div>
+                    <div class="seat K47"></div>
+                    <div class="seat H48"></div>
+                    <div class="seat K48"></div>
+                    <div class="seat H49"></div>
+                    <div class="seat K49"></div>
+                    <div class="seat H50"></div>
+                    <div class="seat K50"></div>
+                    <div class="seat H51"></div>
+                    <div class="seat K51"></div>
+                    <div class="seat H52"></div>
+                    <div class="seat K52"></div>
+                    <div class="seat H53"></div>
+                    <div class="seat K53"></div>
+                    <div class="seat H54"></div>
+                    <div class="seat K54"></div>
+                    <div class="seat H55"></div>
+                    <div class="seat K55"></div>
+                    <div class="seat H56"></div>
+                    <div class="seat K56"></div>
+                    <div class="seat H57"></div>
+                    <div class="seat K57"></div>
+                    <div class="seat H58"></div>
+                    <div class="seat K58"></div>
+                    <div class="seat H59"></div>
+                    <div class="seat K59"></div>
+                    <div class="seat H60"></div>
+                    <div class="seat K60"></div>
+                    <div class="seat H61"></div>
+                    <div class="seat K61"></div>
+                </div>
+                <div class="bottom-notice">
+                    <nav class="menu menu--puck">
+                        <ul class="menu__list">
+                            <li class="menu__item menu__item--current"><a href="" class="menu__link">座位信息</a></li>
+                            <li class="menu__item"><a href="" class="menu__link">预订信息</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="layui-footer" id="event">
+        <!-- 底部固定区域 -->
+        © fsaas.com - 航班座位自动分配系统
+    </div>
+</div>
+<script src="../../js/aircraft.js"></script>
+<script src="../../layui/layui.js"></script>
+<!-- LineMenuStyles -->
+<script src="../../js/classie.js"></script>
+<script src="../../js/clipboard.min.js"></script>
+<script>
+    //JavaScript代码区域
+    layui.use(['element', 'form', 'jquery', 'layer'], function () {
+        var element = layui.element;
+        var form = layui.form;
+        var $ = layui.$, layer = layui.layer;
+
+        //监听提交
+        $("#distribution").on("click", function () {
+            var pname = $("#pName").val();
+            var preferred = $("#preferred").val();
+
+            if (pname !== "") {
+                if (preferred !== "") {
+                    var AjaxData = [];//最外层数组
+                    var passengers = {};//for录入 一组人信息
+                    var passenger_info = [];//一组人信息
+                    var passenger1 = {};
+                    passenger1.id = 1;
+                    passenger1.pname = pname;
+                    passenger1.preferred = preferred;
+                    passenger_info[0] = passenger1;
+
+                    passengers.passenger_num = 1;//一组人数 i
+                    passengers.passenger_info = passenger_info;//一组人信息
+
+                    AjaxData[0] = passengers;
+
+                    $.ajax({
+                        type: "POST",
+                        url: "/assignedSeatForOne",
+                        dataType: "json",
+                        data: JSON.stringify(AjaxData),
+                        contentType: "application/json",
+                        success: function (data) {
+                            console.log(data);
+                            if (data.status === "1") {
+                                var passenger_info = data.message[0].passenger_info[0];
+                                var col = passenger_info.seat.col;
+                                var row = passenger_info.seat.row;
+                                console.log(data);
+                                console.log(passenger_info);
+                                console.log(col);
+                                console.log(row);
+                                $("." + col + row + "").addClass("seat-h");
+                            } else if (data.status === "4") {
+                                layer.msg(data.message, {icon: 5});
+                            } else {
+                                alert("data.status")
+                            }
+                        },
+                        complete: function () {
+                        },
+                        error: function () {
+                            alert("数据加载失败");
+                        }
+                    });
+                } else {
+                    layer.msg('请输入您的喜好', {icon: 5});
+                }
+            } else {
+                layer.msg('请输入您的姓名', {icon: 5});
+            }
+        });
+        $("#distribution-xz").on("click", function () {
+            var AjaxData = [];//最外层数组
+            var passengers = {};//for录入 一组人信息
+            var passenger_info = [];//一组人信息
+
+            $(".xz-form-bd input[name='pName']").each(function (i) {
+                var id = i + 1;
+                window["passenger" + id] = {};
+                passenger_info[i] = window["passenger" + id];
+                passenger_info[i].id = id;
+                passenger_info[i].pname = $(this).val();
+                console.log(passenger_info);
+            });
+
+            $(".xz-form-bd select[name='preferred']").each(function (i) {
+                passenger_info[i].preferred = $(this).val();
+            });
+
+            passengers.passenger_num = passenger_info.length;
+            passengers.passenger_info = passenger_info;
+            AjaxData[0] = passengers;
+            console.log(AjaxData);
+            $.ajax({
+                type: "POST",
+                url: "/assignedSeatForGroup",
+                dataType: "json",
+                data: JSON.stringify(AjaxData),
+                contentType: "application/json",
+                success: function (data) {
+                    console.log(data);
+                    if (data.status === "1") {
+                        var passenger_info = data.message[0].passenger_info;
+                        $(passenger_info).each(function (i) {
+                            var col = passenger_info[i].seat.col;
+                            var row = passenger_info[i].seat.row;
+                            console.log(data);
+                            console.log(passenger_info);
+                            console.log(col);
+                            console.log(row);
+                            $("." + col + row + "").addClass("seat-h");
+                        });
+                    } else if (data.status === "4") {
+                        layer.msg(data.message, {icon: 5});
+                    } else {
+                        alert("a")
+                    }
+                },
+                complete: function () {
+                },
+                error: function () {
+                    alert("数据加载失败");
+                }
+            });
+        });
+
+        $(".jiahao").click(function () {
+            $(".layui-form").append("");
+        });
+    });
+</script>
+
+<!-- 选项卡 -->
+<script>
+    (function () {
+        [].slice.call(document.querySelectorAll('.menu')).forEach(function (menu) {
+            var menuItems = menu.querySelectorAll('.menu__link'),
+                setCurrent = function (ev) {
+                    ev.preventDefault();
+
+                    var item = ev.target.parentNode; // li
+
+                    // return if already current
+                    if (classie.has(item, 'menu__item--current')) {
+                        return false;
+                    }
+                    // remove current
+                    classie.remove(menu.querySelector('.menu__item--current'), 'menu__item--current');
+                    // set current
+                    classie.add(item, 'menu__item--current');
+                };
+
+            [].slice.call(menuItems).forEach(function (el) {
+                el.addEventListener('click', setCurrent);
+            });
+        });
+
+        [].slice.call(document.querySelectorAll('.link-copy')).forEach(function (link) {
+            link.setAttribute('data-clipboard-text', location.protocol + '//' + location.host + location.pathname + '#' + link.parentNode.id);
+            new Clipboard(link);
+            link.addEventListener('click', function () {
+                classie.add(link, 'link-copy--animate');
+                setTimeout(function () {
+                    classie.remove(link, 'link-copy--animate');
+                }, 300);
+            });
+        });
+    })(window);
+</script>
+</body>
+</html>
