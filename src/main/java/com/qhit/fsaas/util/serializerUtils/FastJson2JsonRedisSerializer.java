@@ -1,4 +1,4 @@
-package com.qhit.fsaas.util;
+package com.qhit.fsaas.util.serializerUtils;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.serializer.SerializerFeature;

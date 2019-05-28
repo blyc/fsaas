@@ -90,7 +90,7 @@ tr {
     padding-right: 650px;
     width: 1200px !important;
     margin: 0 auto 0 22px !important;
-    background-color: rgba(0, 0, 0, 0.04) !important;
+    /*background-color: rgba(0, 0, 0, 0.04) !important;*/
 }
 
 .gj-body-bottom {
@@ -106,13 +106,13 @@ tr {
 }
 
 .gj-body-bottom .bottom-notice {
-    /*background-color: #dbeff9;*/
+    background-color: #dbeff9;
     width: 400px;
     height: 750px;
     position: absolute;
-    right: 0;
-    top: -270px;
-    background-color: rgba(0, 0, 0, 0.04) !important;
+    right: -1123px;
+    top: -269px;
+    /*background-color: rgba(0, 0, 0, 0.04) !important;*/
 }
 
 #mini-seat img {
@@ -125,10 +125,15 @@ tr {
     height: 26px;
     position: absolute;
     background: url("../../image/seat/seat-b.png") no-repeat;
+    text-indent: -9999px;
 }
 
 .seat-h {
     background: url("../../image/seat/seat-h.png") no-repeat !important;
+}
+
+.seat-l {
+    background: url("../../image/seat/seat-l.png") no-repeat !important;
 }
 
 /*******************/
@@ -679,19 +684,45 @@ tr {
 }
 
 .xz-form-bd {
-    width: 450px;
+    width: 1199px;
     white-space: nowrap;
     /*display: inline-block;*/
     display: flex;
     overflow-x: auto;
     overflow-y: hidden;
-    height: 200px;
+    height: 162px;
 }
-.xz-form-bd-div{
+
+.xz-form-bd-div {
     display: inline-block;
+    vertical-align: text-top;
+}
+
+/*.xz-form-bd-div2{*/
+/*display: block;*/
+/*}*/
+.fp {
+    margin: 0;
+    width: 1200px;
+}
+
+#distribution-xz {
+    float: left;
+}
+
+#distribution-xz-san {
+    float: right;
+}
+
+.layui-form-selected dl {
+    display: flex;
 }
 
 .xz-form {
+    width: 100%;
+}
+
+.zj-form {
     width: 100%;
 }
 
@@ -702,6 +733,36 @@ tr {
     vertical-align: top;
     margin-top: 46px;
     cursor: pointer;
+}
+
+.timeline, .seat-message {
+    white-space: nowrap;
+    display: flex;
+    overflow-x: hidden;
+    overflow-y: auto;
+    height: 600px;
+}
+
+.layui-layout-admin .layui-main {
+    margin: 0;
+}
+
+.timeMessage {
+    width: 100%;
+    height: 62px;
+    color: #d94f5c;
+    line-height: 4;
+    text-align: center;
+    font-weight: bolder;
+}
+
+.layui-timeline-item, .bottom-economy > div {
+    cursor: pointer;
+}
+
+.layui-timeline-item > .layui-icon {
+    background-color: #d94f5c;
+    text-indent: -9999px;
 }
 
 /****************/

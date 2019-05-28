@@ -10,19 +10,13 @@
     <result column="v_window" jdbcType="INTEGER" property="v_window" />
     <result column="v_basket" jdbcType="INTEGER" property="v_basket" />
     <result column="v_exit" jdbcType="INTEGER" property="v_exit" />
-    <result column="assigned" jdbcType="INTEGER" property="assigned" />
+    <result column="tid" jdbcType="INTEGER" property="tid" />
     <result column="aid" jdbcType="INTEGER" property="aid" />
-    <result column="pname" jdbcType="VARCHAR" property="pName" />
-    <result column="flag" jdbcType="VARCHAR" property="flag" />
+    <result column="pName" jdbcType="VARCHAR" property="pName" />
+    <result column="assigned" jdbcType="INTEGER" property="assigned" />
+    <result column="flag" jdbcType="BIGINT" javaType="java.lang.Long" property="flag" />
   </resultMap>
- <!-- <select id="selectAllSeatsWithFlag" resultMap="BaseResultMap">
-    SELECT
-    s.*,a.aid,a.pname,CONCAT(s.v_gate,s.v_aisle,s.v_window,s.v_basket,s.v_exit,IF(IFNULL(a.aid,0)=0,0,1)) assigned,CONCAT(s.v_gate,s.v_aisle,s.v_window,s.v_basket,s.v_exit,IF(IFNULL(aid,0)=0,0,1)) flag
-    FROM (select * from seats where tid = #{tid}) s LEFT JOIN allocation a ON s.sid = a.sid
-    order by s.srow,s.sid
-  </select>-->
-
   <select id="selectAllSeatsWithFlag" statementType="CALLABLE" resultMap="BaseResultMap">
-    call t1_seats
+    call t1_seats(#{tid,jdbcType=INTEGER})
   </select>
 </mapper>

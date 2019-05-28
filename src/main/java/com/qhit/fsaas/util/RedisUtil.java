@@ -1,13 +1,10 @@
 package com.qhit.fsaas.util;
 
 import com.alibaba.fastjson.JSON;
+import com.alibaba.fastjson.TypeReference;
 import com.alibaba.fastjson.serializer.SerializerFeature;
-import com.qhit.fsaas.bo.Person;
+import com.qhit.fsaas.bo.Allocation;
 import com.qhit.fsaas.bo.Seat;
-import com.qhit.fsaas.util.reference.HashPersonTypeReference;
-import com.qhit.fsaas.util.reference.HashSeatTypeReference;
-import com.qhit.fsaas.util.reference.ListPersonTypeReference;
-import com.qhit.fsaas.util.reference.ListSeatTypeReference;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Component;
 
@@ -32,7 +29,9 @@ public class RedisUtil {
     }
 
     public ArrayList<Seat> getSeatList() {
-        return JSON.parseObject(redisTemplate.opsForValue().get("seatList").toString(), new ListSeatTypeReference());
+        String seatList = redisTemplate.opsForValue().get("seatList").toString();
+        ArrayList<Seat> seats = JSON.parseObject(seatList, new TypeReference<ArrayList<Seat>>(){});
+        return seats;
     }
 
     public void setSeatList(List<Seat> seatList) {
@@ -41,7 +40,7 @@ public class RedisUtil {
 
     public HashMap<Long, LinkedList<Seat>> getSeatHash() {
         Object seatHash = redisTemplate.opsForValue().get("seatHash");
-        return JSON.parseObject(seatHash.toString(), new HashSeatTypeReference());
+        return JSON.parseObject(seatHash.toString(),new TypeReference<HashMap<Long, LinkedList<Seat>>>(){});
     }
 
     public void setSeatHash(HashMap<Long, LinkedList<Seat>> seatHash) {
@@ -60,18 +59,10 @@ public class RedisUtil {
         redisTemplate.opsForValue().set("seatCount", JSON.toJSONString(seatCount,SerializerFeature.WriteClassName));
     }
 
-    public List<Person> getPersonList() {
-        return JSON.parseObject(redisTemplate.opsForValue().get("personList").toString(), new ListPersonTypeReference());
+    public List<Allocation> getAllocationList() {
+        return JSON.parseObject(redisTemplate.opsForValue().get("allocationList").toString(), new TypeReference<ArrayList<Allocation>>(){});
     }
-    public void setPersonList(List<Person> personList) {
-        redisTemplate.opsForValue().set("personList", JSON.toJSONString(personList,SerializerFeature.WriteClassName));
-    }
-
-    public HashMap<Long, LinkedList<Person>> getPersonHash() {
-        return JSON.parseObject(redisTemplate.opsForValue().get("personHash").toString(), new HashPersonTypeReference());
-    }
-
-    public void setPersonHash(HashMap<Long, LinkedList<Person>> personHash) {
-        redisTemplate.opsForValue().set("personHash", JSON.toJSONString(personHash,SerializerFeature.WriteClassName));
+    public void setAllocationList(List<Allocation> allocationList) {
+        redisTemplate.opsForValue().set("allocationList", JSON.toJSONString(allocationList,SerializerFeature.WriteClassName));
     }
 }

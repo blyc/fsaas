@@ -35,6 +35,7 @@ logging:
     root: warn
     org.apache.tomcat: warn
     org.apache.catalina: warn
+    com.alibaba.fastjson: debug
     com.qhit: debug
   pattern:
     console: '%clr([%d]){magenta}%clr([%-5p]){highlight} %clr(-){red}%clr(%-45.45logger{45}){cyan} %clr(:){red}%clr(%-35M){blue}%clr(:){red}%clr(%m){faint}%n'

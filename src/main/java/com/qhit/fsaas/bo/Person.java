@@ -6,19 +6,19 @@ import java.io.Serializable;
 
 @Data
 public class Person implements Serializable {
-    private String name;
+    private String pName;
     private int isWindows = 0;
     private int isAisle = 0;
     private int isGate = 0;
     private int isCarryBaby = 0;
-    private int group;
+    private String group;
     private long flg = 0;
 
     private static final long serialVersionUID = 1L;
 
-    public Person(String name, String preferred,int group) {
-        this.name = name;
-        this.flg |= Global.SEAT_STATUS_UNASSIGNED;
+    public Person(String pName, String preferred,String group) {
+        this.pName = pName;
+        this.flg |= Global.SEAT_STATUS_NOASSIGNED;
         switch (preferred) {
             case "windows":
                 this.isWindows = 1;

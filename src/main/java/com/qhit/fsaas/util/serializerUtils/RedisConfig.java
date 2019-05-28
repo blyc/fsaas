@@ -1,10 +1,10 @@
-package com.qhit.fsaas.util;
+package com.qhit.fsaas.util.serializerUtils;
 
 
-import com.alibaba.fastjson.support.spring.FastJsonRedisSerializer;
 import com.fasterxml.jackson.annotation.JsonAutoDetect;
 import com.fasterxml.jackson.annotation.PropertyAccessor;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.qhit.fsaas.util.serializerUtils.FastJson2JsonRedisSerializer;
 import org.springframework.cache.annotation.CachingConfigurerSupport;
 import org.springframework.cache.annotation.EnableCaching;
 import org.springframework.context.annotation.Bean;
@@ -41,8 +41,8 @@ public class RedisConfig extends CachingConfigurerSupport {
         template.setKeySerializer(new StringRedisSerializer());
 //        template.setKeySerializer(serializer);
         template.setValueSerializer(serializer);
-        template.setHashKeySerializer(serializer);
-        template.setHashValueSerializer(serializer);
+//        template.setHashKeySerializer(serializer);
+//        template.setHashValueSerializer(serializer);
 
         template.afterPropertiesSet();
         return template;

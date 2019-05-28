@@ -1,5 +1,5 @@
 /*
-SQLyog Ultimate v12.5.0 (64 bit)
+SQLyog Ultimate
 MySQL - 8.0.11 : Database - fsaas
 *********************************************************************
 */
@@ -20,14 +20,12 @@ USE `fsaas`;
 CREATE TABLE `allocation` (
   `aid` int(11) NOT NULL AUTO_INCREMENT COMMENT '主键',
   `sid` int(11) DEFAULT NULL COMMENT '座位编号',
-  `pname` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL COMMENT '乘客姓名',
+  `pName` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL COMMENT '乘客姓名',
+  `groupId` varchar(20) DEFAULT NULL COMMENT '记录时间戳,小组编号',
   PRIMARY KEY (`aid`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 /*Data for the table `allocation` */
-
-insert  into `allocation`(`aid`,`sid`,`pname`) values 
-(1,2,'1');
 
 /*Table structure for table `seats` */
 
@@ -317,20 +315,6 @@ CREATE TABLE `type` (
 insert  into `type`(`tid`,`tname`) values 
 (1,'南航空客-A33A-国际航班'),
 (2,'南航空客-A321');
-
-/* Procedure structure for procedure `insert_passengers` */
-
-DELIMITER $$
-
-/*!50003 CREATE DEFINER=`root`@`localhost` PROCEDURE `insert_passengers`()
-BEGIN
-	DECLARE surname VARCHAR(4096) default '["刘","王"]';
-	DECLARE isurname VARCHAR(10) DEFAULT '';
-	DECLARE surnameindex int DEFAULT 0;
-	set isurname = surname->>"$["+i+"]";
-	select isurname;
-	END */$$
-DELIMITER ;
 
 /* Procedure structure for procedure `insert_seats_column_A_t1` */
 
@@ -1066,7 +1050,7 @@ DELIMITER ;
 
 DELIMITER $$
 
-/*!50003 CREATE DEFINER=`root`@`localhost` PROCEDURE `t1_seats`()
+/*!50003 CREATE DEFINER=`root`@`localhost` PROCEDURE `t1_seats`(in tid integer)
 BEGIN
 	DECLARE sr INT default 31;
 	DECLARE sql1 MEDIUMTEXT default '';
@@ -1075,8 +1059,8 @@ BEGIN
 	DO
     
 	IF sr%2 = 1
-	THEN SET sql1 = concat(sql1,' (SELECT s.*,a.aid,a.pname,IF(IFNULL(a.aid, 0) = 0, 1, 0) assigned,CONCAT(s.v_gate,s.v_aisle,s.v_window,s.v_basket,s.v_exit,IF(IFNULL(aid, 0) = 0, 0, 1)) flag FROM(SELECT * FROM seats WHERE tid = 1) s LEFT JOIN allocation a ON s.sid = a.sid WHERE s.srow = ',sr,' ORDER BY s.srow,s.sid LIMIT 0,20) ');
-	ELSE SET sql1 = CONCAT(sql1,' (SELECT s.*,a.aid,a.pname,IF(IFNULL(a.aid, 0) = 0, 1, 0) assigned,CONCAT(s.v_gate,s.v_aisle,s.v_window,s.v_basket,s.v_exit,IF(IFNULL(aid, 0) = 0, 0, 1)) flag FROM(SELECT * FROM seats WHERE tid = 1) s LEFT JOIN allocation a ON s.sid = a.sid WHERE s.srow = ',sr,' ORDER BY s.srow,s.sid desc LIMIT 0,20) ');
+	THEN SET sql1 = concat(sql1,' (SELECT s.*,a.aid,a.pName,IF(IFNULL(a.aid, 0) = 0, 1, 0) assigned,CONCAT(s.v_window,s.v_aisle,s.v_gate,s.v_basket,IF(IFNULL(aid, 0) = 0, 1, 0)) flagDetail,CONV(CONCAT(s.v_window,s.v_aisle,s.v_gate,s.v_basket,IF(IFNULL(aid, 0) = 0, 1, 0)),2,10) flag FROM(SELECT * FROM seats WHERE tid = ',tid,') s LEFT JOIN allocation a ON s.sid = a.sid WHERE s.srow = ',sr,' ORDER BY s.srow,s.sid LIMIT 0,20) ');
+	ELSE SET sql1 = CONCAT(sql1,' (SELECT s.*,a.aid,a.pName,IF(IFNULL(a.aid, 0) = 0, 1, 0) assigned,CONCAT(s.v_window,s.v_aisle,s.v_gate,s.v_basket,IF(IFNULL(aid, 0) = 0, 1, 0)) flagDetail,CONV(CONCAT(s.v_window,s.v_aisle,s.v_gate,s.v_basket,IF(IFNULL(aid, 0) = 0, 1, 0)),2,10) flag FROM(SELECT * FROM seats WHERE tid = ',tid,') s LEFT JOIN allocation a ON s.sid = a.sid WHERE s.srow = ',sr,' ORDER BY s.srow,s.sid desc LIMIT 0,20) ');
 	END IF;
     
 	IF sr != 62

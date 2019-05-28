@@ -19,9 +19,9 @@ public class Seats implements Serializable {
     private Integer aid;
     private String pName;
 
-    //v_gate,s.v_aisle,s.v_window,s.v_basket,s.v_exit,IF(ifNULL(aid,0)=0,0,1)
-    //登机口    靠过道     靠窗     婴儿挂篮     紧急出口    是否已分配
-    private String flag;
+    private Integer tid;
+
+    private Long flag;
 
     private static final long serialVersionUID = 1L;
 }
